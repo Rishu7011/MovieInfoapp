@@ -8,11 +8,9 @@
     "scheme": "mobilemovieapp",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
-
     "ios": {
       "supportsTablet": true
     },
-
     "android": {
       "package": "com.rishu.mobilemovieapp",
       "adaptiveIcon": {
@@ -24,13 +22,11 @@
       "edgeToEdgeEnabled": true,
       "predictiveBackGestureEnabled": false
     },
-
     "web": {
       "bundler": "metro",
       "output": "static",
       "favicon": "./assets/images/splash-icon.png"
     },
-
     "plugins": [
       "expo-router",
       [
@@ -47,19 +43,15 @@
       ],
       "expo-web-browser"
     ],
-
     "experiments": {
       "typedRoutes": true,
       "reactCompiler": true
     },
-
     "extra": {
       "router": {},
       "eas": {
-        "projectId": "ddc47a45-4289-458d-a069-ef1bd110315b"
+        "projectId": "76904c4d-a392-448a-b60d-be62bde142fe"
       }
-    },
-
-    "owner": "rishu8826"
+    }
   }
 }
