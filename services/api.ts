@@ -1,10 +1,17 @@
+
+import Constants from "expo-constants";
+const token = Constants.expoConfig?.extra?.tmdbToken;
+const apiKey = Constants.expoConfig?.extra?.appwriteProjectId;
+console.log("TMDB TOKEN:", Constants.expoConfig?.extra?.tmdbToken);
+
+
 export const TMDB_CONFIG = {
   BASE_URL: "https://api.themoviedb.org/3",
   options:{
     method: 'GET',
     headers: {
       accept: 'application/json',
-      Authorization: `Bearer ${process.env.EXPO_PUBLIC_TMDB_ACCESS_TOKEN}`
+      Authorization: `Bearer ${token}`
     }
   }
 };
@@ -33,7 +40,7 @@ export const fetchMovies = async ({
 
 export const fetchMovieDetails = async(movieId:string):Promise<MovieDetails>=>{
   try{
-    const response = await fetch(`${TMDB_CONFIG.BASE_URL}/movie/${movieId}?api_key=${process.env.EXPO_PUBLIC_TMDB_API_KEY}`,{
+    const response = await fetch(`${TMDB_CONFIG.BASE_URL}/movie/${movieId}?api_key=${apiKey}`,{
       method:'GET',
       headers:TMDB_CONFIG.options.headers
     })
